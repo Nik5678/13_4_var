@@ -28,12 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            textBoxT = new TextBox();
+            textBoxX = new TextBox();
+            btnCalculate = new Button();
+            labelResult = new Label();
+            SuspendLayout();
+            // 
+            // textBoxT
+            // 
+            textBoxT.Location = new Point(25, 36);
+            textBoxT.Name = "textBoxT";
+            textBoxT.Size = new Size(158, 23);
+            textBoxT.TabIndex = 0;
+            textBoxT.Text = "t";
+            textBoxT.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBoxX
+            // 
+            textBoxX.Location = new Point(25, 75);
+            textBoxX.Name = "textBoxX";
+            textBoxX.Size = new Size(158, 23);
+            textBoxX.TabIndex = 1;
+            textBoxX.Text = "x";
+            textBoxX.TextAlign = HorizontalAlignment.Center;
+            // 
+            // btnCalculate
+            // 
+            btnCalculate.Location = new Point(25, 117);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(158, 29);
+            btnCalculate.TabIndex = 2;
+            btnCalculate.Text = "Вычислить";
+            btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
+            // 
+            // labelResult
+            // 
+            labelResult.Location = new Point(25, 165);
+            labelResult.Name = "labelResult";
+            labelResult.Size = new Size(158, 42);
+            labelResult.TabIndex = 3;
+            labelResult.Text = "Ответ";
+            labelResult.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(681, 493);
+            Controls.Add(labelResult);
+            Controls.Add(btnCalculate);
+            Controls.Add(textBoxX);
+            Controls.Add(textBoxT);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox textBoxT;
+        private TextBox textBoxX;
+        private Button btnCalculate;
+        private Label labelResult;
     }
 }
